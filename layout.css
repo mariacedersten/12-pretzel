@@ -1,0 +1,153 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.6rem;
+  width: 960px;
+}
+
+#wrapper {
+  background: url("kuvat/grunge.png");
+  background-size: cover;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#big {
+  display: flex;
+  flex-direction: column;
+}
+
+#special {
+  background-color: #697f86;
+  background-image: url("kuvat/special-bg.png");
+  background-repeat: repeat-x;
+  color: azure;
+  padding: 1rem;
+  background-position-y: bottom;
+}
+
+#main {
+  padding: 1rem;
+  width: 60%;
+}
+
+#sidebar {
+  padding: 1rem;
+  width: 40%;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  display: flex;
+  width: 25%;
+  align-items: center;
+  color: black;
+}
+
+nav ul li span {
+  visibility: hidden;
+}
+
+.logo {
+  width: min-content;
+}
+
+.boldWithSpace {
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.kuva {
+  max-width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+#main a {
+  color: lightseagreen;
+}
+
+#callout {
+  background-color: #f9eacb;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+#sidebar ul {
+  column-count: 2;
+  padding-bottom: 3rem;
+  line-height: 1.5;
+}
+
+#sidebar h2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+#sidebar ul li a {
+  color: #3ca2c3;
+}
+
+footer {
+  text-align: center;
+}
+
+footer h2 {
+  letter-spacing: 0.2rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media screen and (min-width: 426px) {
+  header {
+    flex-direction: row;
+  }
+  nav {
+    flex-grow: 1;
+  }
+
+  nav ul li {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    color: black;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  #big {
+    flex-direction: row;
+  }
+
+  #main {
+    width: 60%;
+  }
+
+  #sidebar {
+    width: 40%;
+  }
+
+  nav ul li {
+    flex-direction: column;
+  }
+
+  nav ul li span {
+    visibility: visible;
+  }
+}
