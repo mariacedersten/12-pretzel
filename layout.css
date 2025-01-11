@@ -5,7 +5,25 @@ html {
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.6rem;
-  width: 960px;
+}
+
+#special {
+  background-color: #697f87;
+  background-image: url("kuvat/special-bg.png");
+  background-repeat: repeat-x;
+  padding: 1rem;
+  background-position-y: bottom;
+}
+
+h1 {
+  color: #aeb8c5;
+}
+
+.boldWithSpace {
+  font-weight: bold;
+  letter-spacing: 0.4rem;
+  text-decoration: none;
+  color: azure;
 }
 
 #wrapper {
@@ -17,30 +35,12 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-block-start: 1rem;
+  padding-left: 1rem;
 }
 
-#big {
-  display: flex;
-  flex-direction: column;
-}
-
-#special {
-  background-color: #697f86;
-  background-image: url("kuvat/special-bg.png");
-  background-repeat: repeat-x;
-  color: azure;
-  padding: 1rem;
-  background-position-y: bottom;
-}
-
-#main {
-  padding: 1rem;
-  width: 60%;
-}
-
-#sidebar {
-  padding: 1rem;
-  width: 40%;
+.logo {
+  width: min-content;
 }
 
 nav ul {
@@ -50,7 +50,7 @@ nav ul {
 
 nav ul li {
   display: flex;
-  width: 25%;
+  width: 20%;
   align-items: center;
   color: black;
 }
@@ -59,18 +59,27 @@ nav ul li span {
   visibility: hidden;
 }
 
-.logo {
-  width: min-content;
+.black-text {
+  color: black;
 }
 
-.boldWithSpace {
-  font-weight: bold;
-  letter-spacing: 0.4rem;
-  text-decoration: none;
+#big {
+  display: flex;
+  flex-direction: column;
+}
+
+#main {
+  padding: 1rem;
+  box-sizing: border-box;
+  float: right;
 }
 
 .bold {
   font-weight: 600;
+}
+
+#main a {
+  color: #3ea3c4;
 }
 
 .kuva {
@@ -79,44 +88,48 @@ nav ul li span {
   margin-bottom: 1rem;
 }
 
-#main a {
-  color: lightseagreen;
-}
-
-#callout {
-  background-color: #f9eacb;
-  padding: 1.5rem;
-  text-align: center;
+#sidebar {
+  padding: 1rem;
 }
 
 #sidebar ul {
   column-count: 2;
-  padding-bottom: 3rem;
+  padding-bottom: 1rem;
   line-height: 1.5;
 }
 
 #sidebar h2 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.2rem;
+  padding-bottom: 0.2rem;
 }
 
 #sidebar ul li a {
   color: #3ca2c3;
 }
 
+#callout {
+  background-color: #f9eacb;
+  padding: 1.5rem;
+  text-align: center;
+  margin-block-end: 2rem;
+}
+
 footer {
   text-align: center;
+  padding-bottom: 2rem;
 }
 
 footer h2 {
   letter-spacing: 0.2rem;
   margin-top: 1rem;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
 }
 
 @media screen and (min-width: 426px) {
   header {
     flex-direction: row;
+    padding: 1rem;
   }
   nav {
     flex-grow: 1;
@@ -125,7 +138,7 @@ footer h2 {
   nav ul li {
     display: flex;
     justify-content: center;
-    width: 25%;
+    width: 20%;
     color: black;
   }
 }
